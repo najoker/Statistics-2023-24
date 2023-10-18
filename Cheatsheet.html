@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Cheatsheet</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        pre {
+            background-color: black;
+            color: #fff;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            white-space: pre-wrap;
+        }
+
+        strong {
+            color: blue;
+        }
+
+        em {
+            color: lightseagreen;
+        }
+
+        span {
+            color:  red;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        <strong>// Array:</strong>
+        - <em>Loop (break/continue)</em>
+        for (let i = 0; i < array.length; i++) {
+          if (condition) break; <span>// End the loop early</span>
+          if (condition) continue; <span>// Skip the current iteration</span>
+        }
+
+        - <em>Add/Remove/Get/Check the existence of an element</em>
+        array.push(element); <span>// Adds an element at the end</span>
+        array.pop(); <span>// Removes the last item</span>
+        array.unshift(element); <span>// Adds an element to the beginning</span>
+        array.shift(); <span>// Removes the first item</span>
+        element = array[index]; <span>// Access the item via index</span>
+        index = array.indexOf(element); <span>// Find the index of an element</span>
+        exists = array.includes(element); <span>// Checks for the existence of an element</span>
+
+        <strong>// Dictionary (Equivalent to JavaScript Object):</strong>
+        - <em>Loop (break/continue)</em>
+        for (let key in object) {
+          if (condition) break; <span>// End the loop early</span>
+          if (condition) continue; <span>// Skip the current iteration</span>
+        }
+
+        - <em>Add/Remove/Get/Check the existence of an element</em>
+        object[key] = value; <span>//Adds or updates an item</span>
+        delete object[key]; <span>// Removes an item</span>
+        value = object[key]; <span>//Access the item by key</span>
+        exists = key in object; <span>// Check for the existence of a key</span>
+
+        <strong>// HashSet (Simulated with objects or arrays):</strong>
+        - <em>Use objects or arrays to simulate a set.</em>
+        - <em>For uniqueness, maintain a dictionary with keys as unique values.</em>
+
+        <strong>// SortedSet (you can use arrays or a library like SortedSet.js):</strong>
+        - <em>Loop: Same as arrays</em>
+        - <em>add(): while maintaining sorted order</em>
+        - <em>delete(): delete an element from the sortedset</em>
+
+        <strong>// Queue (Simulated with arrays):</strong>
+        - <em>Enqueue: Push an element to the end of the array</em>
+        queue.push(element);
+        - <em>Dequeue: Remove an element from the front of the array</em>
+        element = queue.shift();
+
+        <strong>// Stack (Simulated with arrays):</strong>
+        - <em>Push: Push an element onto the stack</em>
+        stack.push(element);
+        - <em>Pop: Pop an element from the top of the stack</em>
+        element = stack.pop();
+
+        <strong>// Linked List (Custom implementation if needed):</strong>
+        - <em>Loop: Custom implementation using next pointers</em>
+        - <em>Add: Traverse and link nodes</em>
+        - <em>Remove: Traverse, unlink, and re-link nodes</em>
+        - <em>Get: Traverse and return node value</em>
+    </pre>
+</body>
+</html>
