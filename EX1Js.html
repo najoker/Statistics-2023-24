@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Drawing</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+
+    <script>
+	// Get a reference to the canvas
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	
+	// LINE
+		
+        // Line color = Brown
+	ctx.strokeStyle = "green";
+	ctx.lineWidth = 4;
+
+	// Line coordinates
+	var lineX1 = canvas.width * 3 / 4;
+	var lineY1 = canvas.height / 4;
+	var lineX2 = canvas.width * 3 / 4;
+	var lineY2 = canvas.height * 3 / 4;
+
+	// Draw the line
+	ctx.beginPath();
+	ctx.moveTo(lineX1, lineY1);
+	ctx.lineTo(lineX2, lineY2);
+	ctx.stroke();
+	
+	// POINT
+		
+        // Point color = Black
+	ctx.fillStyle = "blue";
+
+	// Point coordinates
+	var pointX = canvas.width / 4;
+	var pointY = canvas.height / 4;
+
+	// Draw the point
+	ctx.beginPath();
+	ctx.arc(pointX, pointY, 2, 0, 2 * Math.PI);
+	ctx.fill();
+
+	// CIRCLE
+
+        // Circle color = Blue
+	ctx.fillStyle = "grey";
+
+	// Circle center coordinates and radius
+	var centerX = canvas.width / 4;
+	var centerY = canvas.height / 2;
+	var circleRadius = 60; // Circle radius
+
+	// Draw the circle
+	ctx.beginPath();
+	ctx.arc(centerX, centerY, circleRadius, 0, 2 * Math.PI);
+	ctx.fill();
+
+	// RECTANGLE
+
+        // Rectangle color = Yellow
+	ctx.fillStyle = "yellow";
+
+	// Rectangle coordinates
+	var rectX = canvas.width / 2;
+	var rectY = canvas.height / 4;
+	var rectWidth = 80; // Rectangle width
+	var rectHeight = 60; // Rectangle height
+
+	// Draw the rectangle
+	ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
+    </script>
+</body>
+</html>
